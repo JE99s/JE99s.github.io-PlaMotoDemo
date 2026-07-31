@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Motorsports | Auto Body & Paint</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ========================================= */
+        /* GLOBAL SHELL CSS (Same on all pages)      */
+        /* ========================================= */
+        :root {
+            --navy: #1a365d;
+            --crimson: #b91c1c;
+            --silver: #f8f9fa;
+            --text-dark: #1f2937;
+            --white: #ffffff;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--silver); /* Keeps the background clean and light */
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 { font-family: 'Georgia', serif; color: var(--navy); margin-bottom: 1rem; }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--crimson);
+            color: var(--white);
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .top-bar a { color: var(--white); text-decoration: none; }
+        .top-bar a:hover { text-decoration: underline; }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--navy);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Clickable Logo */
+        header h1 { margin: 0; font-size: 1.8rem; }
+        header h1 a.logo-link { color: var(--white); text-decoration: none; transition: opacity 0.3s ease; }
+        header h1 a.logo-link:hover { opacity: 0.8; }
+
+        .hamburger { display: none; font-size: 2rem; color: var(--white); cursor: pointer; user-select: none; }
+        nav { display: flex; align-items: center; }
+        nav a { color: var(--white); text-decoration: none; margin-left: 1.5rem; font-weight: bold; transition: color 0.3s ease; }
+        nav a:hover { color: var(--crimson); }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            nav { display: none; flex-direction: column; width: 100%; background-color: var(--navy); padding-bottom: 1rem; }
+            nav.active { display: flex; }
+            nav a { margin: 1rem 0; font-size: 1.2rem; }
+        }
+
+        main { flex: 1; }
+        
+        .btn {
+            background-color: var(--crimson);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .btn:hover { background-color: #8b0000; }
+
+        /* ========================================= */
+        /* HOME PAGE SPECIFIC STYLES                 */
+        /* ========================================= */
+        .hero { background-color: var(--text-dark); color: var(--white); text-align: center; padding: 4rem 2rem; }
+        .hero h2 { color: var(--white); font-size: 2.5rem; margin-top: 0; }
+        .hero p { font-size: 1.2rem; }
+
+        .services-section { padding: 4rem 5%; text-align: center; background-color: var(--white); }
+        .services-section h2 { color: var(--crimson); font-size: 2rem; margin-bottom: 3rem; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto; }
+        .service-card { display: flex; flex-direction: column; align-items: center; padding: 1rem; }
+
+        /* Restored Circular Images */
+        .service-card img {
+            width: 100%;
+            max-width: 250px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--navy); }
+        .service-card p { font-size: 0.95rem; margin-bottom: 1.5rem; min-height: 80px; }
+
+        /* ========================================= */
+        /* FOOTER                                    */
+        /* ========================================= */
+        footer { background-color: var(--navy); color: var(--white); text-align: center; padding: 2rem 5%; }
+        .socials { margin-bottom: 1rem; }
+        .socials a { color: var(--white); text-decoration: none; margin: 0 15px; transition: color 0.3s ease; }
+        .socials a:hover { color: var(--crimson); }
+
+        /* ======================================================== */
+        /* PAGE CONTENT CONTAINER (For About, Gallery, Reviews)     */
+        /* ======================================================== */
+        .page-container { 
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 3rem auto; 
+            padding: 3rem; 
+            background-color: var(--white); 
+            border-radius: 8px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            box-sizing: border-box; 
+        }
+
+        /* Mobile Adjustment */
+        @media (max-width: 768px) {
+            .page-container {
+                width: 95%;
+                padding: 1.5rem; 
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        24/7 Towing & Repair: <a href="tel:2815550199">(281) 555-0199</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html" class="logo-link">Platinum Motorsports</a></h1>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Before/After</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">What Our Customers Say</h2>
+        
+        <div class="grid" style="margin-bottom: 4rem;">
+            <div class="card" style="border-top: none; border-left: 4px solid var(--crimson);">
+                <p><em>"Platinum Motorsports went out of their way to be helpful after my accident. My car looks like it just rolled off the showroom floor!"</em></p>
+                <p style="text-align: right; color: var(--navy);"><strong>- John S.</strong></p>
+            </div>
+            <div class="card" style="border-top: none; border-left: 4px solid var(--crimson);">
+                <p><em>"They went above and beyond to repair my truck. Best body shop in town, top-notch service and my paint matches perfectly."</em></p>
+                <p style="text-align: right; color: var(--navy);"><strong>- Dennis G.</strong></p>
+            </div>
+        </div>
+
+        <div class="card" style="max-width: 600px; margin: auto;">
+            <h3 style="text-align: center; color: var(--navy);">Leave Us Feedback</h3>
+            <p style="text-align: center; font-size: 0.9rem; color: #555;">We'd love to hear about your experience.</p>
+            
+            <form action="https://formspree.io/f/YOUR_ENDPOINT_ID" method="POST" style="margin-top: 1.5rem;">
+                <input type="text" name="_gotcha" style="display:none" />
+                
+                <label style="font-weight: bold; display: block; margin-top: 1rem;" for="name">Full Name:</label>
+                <input style="width: 100%; padding: 12px; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" type="text" id="name" name="name" required>
+                
+                <label style="font-weight: bold; display: block; margin-top: 1rem;" for="email">Email Address:</label>
+                <input style="width: 100%; padding: 12px; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" type="email" id="email" name="_replyto" required>
+                
+                <label style="font-weight: bold; display: block; margin-top: 1rem;" for="review">Your Review:</label>
+                <textarea style="width: 100%; padding: 12px; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px;" id="review" name="message" rows="5" required></textarea>
+                
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1.5rem; font-size: 1.1rem;">Submit Feedback</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook fa-2x"></i></a> 
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a> 
+            <a href="#" aria-label="Yelp"><i class="fab fa-yelp fa-2x"></i></a>
+        </div>
+        <p>© 2026 Platinum Motorsports Paint & Body Center. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
