@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Platinum Motorsports</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ======================================================== */
+        /* GLOBAL SHELL CSS                                         */
+        /* ======================================================== */
+        :root { --navy: #1a365d; --crimson: #b91c1c; --silver: #f8f9fa; --text-dark: #1f2937; --white: #ffffff; }
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: var(--text-dark); background-color: var(--silver); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+        h1, h2, h3 { font-family: 'Georgia', serif; color: var(--navy); margin-bottom: 1rem; }
+        .top-bar { background-color: var(--crimson); color: var(--white); text-align: center; padding: 0.5rem; font-size: 0.9rem; font-weight: bold; letter-spacing: 1px; }
+        .top-bar a { color: var(--white); text-decoration: none; }
+        .top-bar a:hover { text-decoration: underline; }
+        header { background-color: var(--navy); color: var(--white); padding: 1rem 5%; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        header h1 { margin: 0; font-size: 1.8rem; }
+        header h1 a.logo-link { color: var(--white); text-decoration: none; transition: opacity 0.3s ease; }
+        header h1 a.logo-link:hover { opacity: 0.8; }
+        .hamburger { display: none; font-size: 2rem; color: var(--white); cursor: pointer; user-select: none; }
+        nav { display: flex; align-items: center; }
+        nav a { color: var(--white); text-decoration: none; margin-left: 1.5rem; font-weight: bold; transition: color 0.3s ease; }
+        nav a:hover { color: var(--crimson); }
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            nav { display: none; flex-direction: column; width: 100%; background-color: var(--navy); padding-bottom: 1rem; }
+            nav.active { display: flex; }
+            nav a { margin: 1rem 0; font-size: 1.2rem; }
+        }
+        footer { background-color: var(--navy); color: var(--white); text-align: center; padding: 2rem 5%; margin-top: auto; }
+        .socials a { color: var(--white); margin: 0 15px; font-size: 2.0rem; transition: color 0.3s ease; }
+        .socials a:hover { color: var(--crimson); }
+
+        /* ======================================================== */
+        /* PAGE CONTENT CONTAINER (The Floating Card Fix)           */
+        /* ======================================================== */
+        .page-container { 
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 3rem auto; 
+            padding: 3rem; 
+            background-color: var(--white); 
+            border-radius: 8px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            box-sizing: border-box; 
+        }
+
+        @media (max-width: 768px) {
+            .page-container { width: 95%; padding: 1.5rem; margin: 2rem auto; }
+        }
+
+        /* ======================================================== */
+        /* AUTOMATED SLIDESHOW GALLERY CSS                          */
+        /* ======================================================== */
+        .page-container h2 { text-align: center; margin-bottom: 2rem; color: var(--crimson); }
+        
+        .slideshow-container { 
+            position: relative; 
+            max-width: 100%; 
+            margin: auto; 
+            border-radius: 8px;
+            overflow: hidden; /* Keeps the images neatly inside the box */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .slide { 
+            display: none; 
+            width: 100%;
+        }
+
+        /* Forces the images to fit perfectly within the container */
+        .slide img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            border-radius: 8px;
+        }
+
+        /* Smooth fade animation for the transition */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0.4 }
+            to { opacity: 1 }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">24/7 Towing & Repair: <a href="tel:2815550199">(281) 555-0199</a></div>
+
+    <header>
+        <h1><a href="index.html" class="logo-link">Platinum Motorsports</a></h1>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Before/After</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h2>Our Recent Restorations</h2>
+        
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/wrecked.jpg" alt="Before and after bumper repair">
+            </div>
+
+            <div class="slide fade">
+                <img src="images/download.jpg" alt="Before and after side door repair">
+            </div>
+
+            </div>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-yelp"></i></a>
+        </div>
+        <p>© 2026 Platinum Motorsports Paint & Body Center. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            
+            // Move to the next slide
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 } 
+            
+            // Display the current slide
+            slides[slideIndex - 1].style.display = "block";  
+            
+            // Set the timer to run this function again every 3000ms (3 seconds)
+            setTimeout(showSlides, 5000); 
+        }
+    </script>
+</body>
+</html>
