@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Motorsports | Auto Body & Paint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <span class="top-bar-item"><i class="fa-solid fa-phone"></i> <a href="tel:2815550199">(281) 555-0199</a></span>
+        <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> 123 Auto Body Way, Sugar Land, TX 77479</span>
+        <span class="top-bar-item"><i class="fa-solid fa-clock"></i> Mon–Fri 8am–5pm | 24/7 Towing</span>
+    </div>
+
+    <header>
+        <h1><a href="index.html" class="logo-link">Platinum Motorsports</a></h1>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Before/After</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#authorization" class="nav-cta">Get Estimate</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Repairs Backed by Honesty & Integrity</h2>
+            <p>Restoring your vehicle to pre-loss condition with a lifetime warranty on every repair we make.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn">Get a Free Estimate</a>
+                <a href="gallery.html" class="btn btn-outline">View Our Work</a>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="eyebrow center">What We Offer</div>
+            <h2>Expert Repair Services</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-media">
+                        <img src="images/WomanOnPhone.jpg" alt="Woman on phone after accident">
+                    </div>
+                    <div class="label-bar">Collision & Body Repair</div>
+                    <div class="card-body">
+                        <p>We do our best at collision repair to restore your vehicle to its pre-loss condition. Everything we do comes with a lifetime warranty.</p>
+                        <a href="contact.html" class="btn">Find out more</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-media">
+                        <img src="images/wrecker.jpg" alt="Red Tow Truck">
+                    </div>
+                    <div class="label-bar">24-Hour Wrecker Service</div>
+                    <div class="card-body">
+                        <p>We are available 24/7 for towing services at (281) 555-0199.</p>
+                        <a href="contact.html" class="btn">Find out more</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-media">
+                        <div class="img-placeholder">[Photo Coming Soon]</div>
+                    </div>
+                    <div class="label-bar">Custom Auto Painting</div>
+                    <div class="card-body">
+                        <p>All of our paint jobs are done with the best quality paint and come with a lifetime warranty.</p>
+                        <a href="contact.html" class="btn">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-dark">
+            <div class="eyebrow center">Skip the Paperwork Line</div>
+            <h2>Start Your Work Authorization</h2>
+            <p class="lede">If your vehicle has already been dropped off or scheduled, get your repair moving by digitally signing our work authorization form. It only takes a few minutes.</p>
+            <ul class="icon-list on-dark">
+                <li><i class="fa-solid fa-circle-check"></i> Takes about 5 minutes to complete</li>
+                <li><i class="fa-solid fa-circle-check"></i> Secure, legally binding digital signature</li>
+                <li><i class="fa-solid fa-circle-check"></i> Starts your repair and insurance process immediately</li>
+            </ul>
+            <a href="contact.html#authorization" class="btn">Get Your Work Authorization Form</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bar">
+            <div class="footer-item">
+                <i class="fa-solid fa-phone"></i>
+                <strong>Call Us</strong>
+                <a href="tel:2815550199">(281) 555-0199</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>Visit Us</strong>
+                <span>123 Auto Body Way, Sugar Land, TX 77479</span>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-clock"></i>
+                <strong>Business Hours</strong>
+                <span>Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+        </div>
+        <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" aria-label="Yelp"><i class="fab fa-yelp fa-lg"></i></a>
+        </div>
+        <p class="copyright">© 2026 Platinum Motorsports Paint & Body Center. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

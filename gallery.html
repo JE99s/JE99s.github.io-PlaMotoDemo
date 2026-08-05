@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Platinum Motorsports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <span class="top-bar-item"><i class="fa-solid fa-phone"></i> <a href="tel:2815550199">(281) 555-0199</a></span>
+        <span class="top-bar-item"><i class="fa-solid fa-location-dot"></i> 123 Auto Body Way, Sugar Land, TX 77479</span>
+        <span class="top-bar-item"><i class="fa-solid fa-clock"></i> Mon–Fri 8am–5pm | 24/7 Towing</span>
+    </div>
+
+    <header>
+        <h1><a href="index.html" class="logo-link">Platinum Motorsports</a></h1>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Before/After</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#authorization" class="nav-cta">Get Estimate</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="eyebrow center">See The Difference</div>
+        <h2 style="text-align: center;">Our Recent Restorations</h2>
+
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/wrecked.jpg" alt="Before and after bumper repair">
+                <div class="slide-caption">Before & After: Bumper Repair</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/download.jpg" alt="Before and after side door repair">
+                <div class="slide-caption">Before & After: Side Door Repair</div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bar">
+            <div class="footer-item">
+                <i class="fa-solid fa-phone"></i>
+                <strong>Call Us</strong>
+                <a href="tel:2815550199">(281) 555-0199</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>Visit Us</strong>
+                <span>123 Auto Body Way, Sugar Land, TX 77479</span>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-clock"></i>
+                <strong>Business Hours</strong>
+                <span>Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+        </div>
+        <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" aria-label="Yelp"><i class="fab fa-yelp fa-lg"></i></a>
+        </div>
+        <p class="copyright">© 2026 Platinum Motorsports Paint & Body Center. All Rights Reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Move to the next slide
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+
+            // Display the current slide
+            slides[slideIndex - 1].style.display = "block";
+
+            // Set the timer to run this function again
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</body>
+</html>
