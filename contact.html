@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Platinum Motorsports Collision Center</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with the real Measurement ID once the GA4 property is created -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-bar-contacts">
+                <span class="info-bar-item"><i class="fa-solid fa-phone"></i> <a href="tel:2815550199">(281) 555-0199</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-clock"></i> Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+            <div class="info-bar-socials">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="Platinum Motorsports Collision Center" class="brand-logo">
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html#authorization" class="nav-cta">Get Estimate</a>
+        </nav>
+    </div>
+
+    <section class="page-hero">
+        <div class="eyebrow center on-dark">Get In Touch</div>
+        <h1>Contact &amp; Location</h1>
+        <p>Questions about a repair, an estimate, or your insurance claim? Reach out any time.</p>
+    </section>
+
+    <main class="page-container wide">
+        <div class="grid">
+
+            <div class="card">
+                <h3><i class="fa-solid fa-phone"></i> Get in Touch</h3>
+                <p><strong>Main Shop Phone:</strong> <a href="tel:2815550199" style="color: var(--black); font-weight: bold;">(281) 555-0199</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@platinummotorsports.com" style="color: var(--black); font-weight: bold;">info@platinummotorsports.com</a></p>
+
+                <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border);">
+
+                <h3><i class="fa-solid fa-clock"></i> Business Hours</h3>
+                <p><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
+                <p><strong>Saturday - Sunday:</strong> Closed</p>
+                <p><em>*Available 24/7 for wrecker and towing services.</em></p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-location-dot"></i> Find Us</h3>
+                <p>123 Auto Body Way, Sugar Land, TX 77479</p>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.861828813457!2d-95.76112042384223!3d29.578623275161434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86411e713cad2e97%3A0x9ea934cab94c0b52!2sPlatinum%20Motor%20Sports!5e0!3m2!1sen!2sus!4v1783224660540!5m2!1sen!2sus"
+                    width="100%"
+                    height="450"
+                    style="border:0; border-radius: 8px; margin-top: 1rem;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+
+        <div class="card feedback-card" style="margin-top: 3rem;">
+            <h3 style="justify-content: center; color: var(--black);">Send Us a Message</h3>
+            <p style="text-align: center; font-size: 0.9rem; color: var(--chrome-lo);">Questions about a repair or an estimate? Send us a message and we'll get back to you.</p>
+
+            <form action="https://formspree.io/f/YOUR_ENDPOINT_ID" method="POST" style="margin-top: 1.5rem;">
+                <input type="text" name="_gotcha" style="display:none" />
+
+                <label class="form-field" for="contact-name">Full Name:</label>
+                <input class="form-input" type="text" id="contact-name" name="name" required>
+
+                <label class="form-field" for="contact-email">Email Address:</label>
+                <input class="form-input" type="email" id="contact-email" name="_replyto" required>
+
+                <label class="form-field" for="contact-phone">Phone Number:</label>
+                <input class="form-input" type="tel" id="contact-phone" name="phone">
+
+                <label class="form-field" for="contact-message">Message:</label>
+                <textarea class="form-input" id="contact-message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1.5rem; font-size: 1.1rem;">Send Message</button>
+            </form>
+        </div>
+
+        <section class="auth-section" id="authorization">
+            <div class="eyebrow center">Skip the Paperwork Line</div>
+            <div class="auth-header">
+                <h2>Digital Repair Work Authorization</h2>
+                <p>Please fill out and digitally sign the form below so our shop can begin processing your vehicle repairs and communicating with your insurance carrier.</p>
+            </div>
+
+            <div class="form-embed-wrapper">
+                <iframe
+                  id="JotFormIFrame-262155656903057"
+                  title="Platinum Motorsports Repair Authorization"
+                  onload="window.parent.scrollTo(0,0)"
+                  allowtransparency="true"
+                  allow="geolocation; microphone; camera; fullscreen"
+                  src="https://form.jotform.com/262155656903057"
+                  frameborder="0"
+                  style="min-width:100%;max-width:100%;height:700px;border:none;"
+                  scrolling="yes">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a href="index.html" class="footer-brand"><img src="images/logo.png" alt="Platinum Motorsports Collision Center"></a>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="contact-bar">
+            <div class="footer-item">
+                <i class="fa-solid fa-phone"></i>
+                <strong>Call Us</strong>
+                <a href="tel:2815550199">(281) 555-0199</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-envelope"></i>
+                <strong>Email Us</strong>
+                <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>Visit Us</strong>
+                <span>123 Auto Body Way, Sugar Land, TX 77479</span>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-clock"></i>
+                <strong>Business Hours</strong>
+                <span>Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+        </div>
+        <div class="copyright-bar">© 2026 Platinum Motorsports Collision Center. All Rights Reserved.</div>
+    </footer>
+
+    <a href="contact.html#authorization" class="floating-auth"><i class="fa-solid fa-file-signature"></i> Online Authorization</a>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Motorsports Collision Center | Auto Body & Paint</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with the real Measurement ID once the GA4 property is created -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-bar-contacts">
+                <span class="info-bar-item"><i class="fa-solid fa-phone"></i> <a href="tel:2815550199">(281) 555-0199</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-clock"></i> Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+            <div class="info-bar-socials">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="Platinum Motorsports Collision Center" class="brand-logo">
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#authorization" class="nav-cta">Get Estimate</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="eyebrow">Your Choice For Collision Repair</div>
+                <h1>Damage Your Car?<br>We'll Make It Right.</h1>
+                <p class="lede">Restoring your vehicle to pre-loss condition with a lifetime warranty on every repair we make — backed by honesty and integrity from drop-off to delivery.</p>
+                <div class="hero-actions">
+                    <a href="contact.html#authorization" class="btn">Get a Free Estimate</a>
+                    <a href="gallery.html" class="btn btn-outline">View Our Work</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="serve-section">
+            <h2>How Can We Serve You?</h2>
+            <div class="check-columns">
+                <div class="check-item"><i class="fa-solid fa-check"></i> ADAS Calibration</div>
+                <div class="check-item"><i class="fa-solid fa-check"></i> Dent Repair &amp; Removal</div>
+                <div class="check-item"><i class="fa-solid fa-check"></i> Minor/Major Collision Repair</div>
+                <div class="check-item"><i class="fa-solid fa-check"></i> Auto Glass Replacement</div>
+                <div class="check-item"><i class="fa-solid fa-check"></i> Custom &amp; Factory-Matched Painting</div>
+                <div class="check-item"><i class="fa-solid fa-check"></i> Paintless Dent Repair</div>
+                <div class="check-item"><i class="fa-solid fa-check"></i> Frame &amp; Structural Repair</div>
+                <div class="check-item"><i class="fa-solid fa-check"></i> 24/7 Towing &amp; Wrecker Service</div>
+            </div>
+
+            <div class="diamond-row">
+                <div class="diamond-wrap">
+                    <div class="diamond"><div class="diamond-content"><i class="fa-solid fa-user-gear"></i><span>Certified Technicians</span></div></div>
+                </div>
+                <div class="diamond-wrap">
+                    <div class="diamond"><div class="diamond-content"><i class="fa-solid fa-car-on"></i><span>ADAS Calibration &amp; Safety</span></div></div>
+                </div>
+                <div class="diamond-wrap">
+                    <div class="diamond"><div class="diamond-content"><i class="fa-solid fa-file-signature"></i><span>Insurance Claim Assistance</span></div></div>
+                </div>
+                <div class="diamond-wrap">
+                    <div class="diamond"><div class="diamond-content"><i class="fa-solid fa-spray-can-sparkles"></i><span>Factory-Matched Paint</span></div></div>
+                </div>
+                <div class="diamond-wrap">
+                    <div class="diamond"><div class="diamond-content"><i class="fa-solid fa-car-side"></i><span>Auto Detailing Services</span></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="difference-section">
+            <h2>The Platinum Motorsports Difference</h2>
+            <div class="timeline">
+                <div class="timeline-item right">
+                    <div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-label">Book Vehicle Drop-Off</div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-label">Insurance Claim Assistance</div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-label">Free Repair Estimate</div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-label">Our Auto Repair Process</div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-label">Towing &amp; Rental Options</div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-dot"><i class="fa-solid fa-check"></i></div>
+                    <div class="timeline-label">Lifetime Warranty</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="teaser-section">
+            <div class="eyebrow center">Who We Are</div>
+            <h2>#1 Auto Body Repair &amp; Collision Center</h2>
+            <p class="lede">Platinum Motorsports Collision Center offers expert collision repair services from a team of dedicated technicians. Count on outstanding craftsmanship and personalized care for your vehicle, no matter the extent of damage.</p>
+            <div class="btn-row center">
+                <a href="about.html" class="btn btn-outline">More About Us</a>
+                <a href="contact.html" class="btn">Get In Touch</a>
+            </div>
+            <p class="teaser-tagline">Restoring your vehicle to its pre-loss condition is our <u>top priority</u>.</p>
+        </section>
+
+        <section class="cta-banner">
+            <div class="eyebrow center on-dark">Skip The Paperwork Line</div>
+            <h2>Once Your Repairs Are Approved...</h2>
+            <p>Start your work authorization online in about five minutes with a secure digital signature — it kicks off your repair and insurance process immediately.</p>
+            <div class="btn-row center">
+                <a href="about.html#warranty" class="btn btn-outline">Lifetime Warranty</a>
+                <a href="contact.html#authorization" class="btn">Get Your Work Authorization Form</a>
+            </div>
+        </section>
+
+        <section class="testimonials-section" id="reviews">
+            <div class="eyebrow center on-dark">Customer Reviews</div>
+            <h2>Hear From Past Customers</h2>
+            <div class="stars" aria-label="5 out of 5 stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="platform-badges">
+                <span class="platform-badge"><i class="fa-brands fa-google"></i> Google <strong>4.9</strong></span>
+                <span class="platform-badge"><i class="fa-brands fa-yelp"></i> Yelp <strong>4.5</strong></span>
+                <span class="platform-badge"><i class="fa-brands fa-facebook"></i> Facebook <strong>4.8</strong></span>
+            </div>
+
+            <div class="grid">
+                <div class="card review-card">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p><em>"Platinum Motorsports went out of their way to be helpful after my accident. My car looks like it just rolled off the showroom floor!"</em></p>
+                    <p class="review-author"><strong>- John S.</strong></p>
+                </div>
+                <div class="card review-card">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p><em>"They went above and beyond to repair my truck. Best body shop in town, top-notch service and my paint matches perfectly."</em></p>
+                    <p class="review-author"><strong>- Dennis G.</strong></p>
+                </div>
+            </div>
+
+            <div class="card feedback-card">
+                <h3 style="justify-content: center;">Leave Us Feedback</h3>
+                <p style="text-align: center; font-size: 0.9rem; color: var(--chrome-lo);">We'd love to hear about your experience.</p>
+
+                <form action="https://formspree.io/f/YOUR_ENDPOINT_ID" method="POST" style="margin-top: 1.5rem;">
+                    <input type="text" name="_gotcha" style="display:none" />
+
+                    <label class="form-field" for="name">Full Name:</label>
+                    <input class="form-input" type="text" id="name" name="name" required>
+
+                    <label class="form-field" for="email">Email Address:</label>
+                    <input class="form-input" type="email" id="email" name="_replyto" required>
+
+                    <label class="form-field" for="review">Your Review:</label>
+                    <textarea class="form-input" id="review" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 1.5rem; font-size: 1.1rem;">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="handover-section">
+            <div class="handover-media" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <div class="eyebrow">Online Repair Authorization</div>
+                <h2>Handing You Back The Keys — Good As New</h2>
+                <p>Authorize repairs for your vehicle conveniently from anywhere, before you ever set foot in our shop. Tap the Online Authorization button to get started.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a href="index.html" class="footer-brand"><img src="images/logo.png" alt="Platinum Motorsports Collision Center"></a>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="contact-bar">
+            <div class="footer-item">
+                <i class="fa-solid fa-phone"></i>
+                <strong>Call Us</strong>
+                <a href="tel:2815550199">(281) 555-0199</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-envelope"></i>
+                <strong>Email Us</strong>
+                <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>Visit Us</strong>
+                <span>123 Auto Body Way, Sugar Land, TX 77479</span>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-clock"></i>
+                <strong>Business Hours</strong>
+                <span>Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+        </div>
+        <div class="copyright-bar">© 2026 Platinum Motorsports Collision Center. All Rights Reserved.</div>
+    </footer>
+
+    <a href="contact.html#authorization" class="floating-auth"><i class="fa-solid fa-file-signature"></i> Online Authorization</a>
+
+    <script src="main.js"></script>
+</body>
+</html>

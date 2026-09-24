@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Platinum Motorsports Collision Center</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with the real Measurement ID once the GA4 property is created -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-bar-contacts">
+                <span class="info-bar-item"><i class="fa-solid fa-phone"></i> <a href="tel:2815550199">(281) 555-0199</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-clock"></i> Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+            <div class="info-bar-socials">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="Platinum Motorsports Collision Center" class="brand-logo">
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#authorization" class="nav-cta">Get Estimate</a>
+        </nav>
+    </div>
+
+    <section class="page-hero">
+        <div class="eyebrow center on-dark">See The Difference</div>
+        <h1>Our Recent Restorations</h1>
+        <p>A look at real before-and-after results from our shop.</p>
+    </section>
+
+    <main class="page-container">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/wrecked.jpg" alt="Before and after bumper repair">
+                <div class="slide-caption">Before & After: Bumper Repair</div>
+            </div>
+
+            <div class="slide fade">
+                <img src="images/download.jpg" alt="Before and after side door repair">
+                <div class="slide-caption">Before & After: Side Door Repair</div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a href="index.html" class="footer-brand"><img src="images/logo.png" alt="Platinum Motorsports Collision Center"></a>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="contact-bar">
+            <div class="footer-item">
+                <i class="fa-solid fa-phone"></i>
+                <strong>Call Us</strong>
+                <a href="tel:2815550199">(281) 555-0199</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-envelope"></i>
+                <strong>Email Us</strong>
+                <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>Visit Us</strong>
+                <span>123 Auto Body Way, Sugar Land, TX 77479</span>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-clock"></i>
+                <strong>Business Hours</strong>
+                <span>Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+        </div>
+        <div class="copyright-bar">© 2026 Platinum Motorsports Collision Center. All Rights Reserved.</div>
+    </footer>
+
+    <a href="contact.html#authorization" class="floating-auth"><i class="fa-solid fa-file-signature"></i> Online Authorization</a>
+
+    <script src="main.js"></script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+
+            // Hide all slides
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Move to the next slide
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+
+            // Display the current slide
+            slides[slideIndex - 1].style.display = "block";
+
+            // Set the timer to run this function again
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+</body>
+</html>

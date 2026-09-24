@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Platinum Motorsports Collision Center</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX with the real Measurement ID once the GA4 property is created -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-bar-contacts">
+                <span class="info-bar-item"><i class="fa-solid fa-phone"></i> <a href="tel:2815550199">(281) 555-0199</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a></span>
+                <span class="info-bar-item"><i class="fa-solid fa-clock"></i> Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+            <div class="info-bar-socials">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-bar">
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="Platinum Motorsports Collision Center" class="brand-logo">
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#authorization" class="nav-cta">Get Estimate</a>
+        </nav>
+    </div>
+
+    <section class="page-hero">
+        <div class="eyebrow center on-dark">Who We Are</div>
+        <h1>About Platinum Motorsports Collision Center</h1>
+        <p>A dedicated team of automotive restoration experts, proudly serving our local community with honest work and transparent pricing.</p>
+    </section>
+
+    <main class="page-container wide">
+        <div class="about-grid">
+            <div class="about-image"></div>
+            <div>
+                <div class="eyebrow">Our Story</div>
+                <h2>Built On Craftsmanship, Not Shortcuts</h2>
+                <p>Platinum Motorsports Collision Center was founded on a simple idea: every vehicle that comes through our doors should leave looking and driving like it never left the showroom. Our technicians treat every repair — from a minor bumper scuff to a full structural rebuild — with the same attention to detail and pride in the finished result.</p>
+                <p>We handle the insurance paperwork, the parts sourcing, and the color-matching so you don't have to. All you have to do is drop off your vehicle and let us take it from there.</p>
+            </div>
+        </div>
+
+        <div class="trust-bar" style="margin-top: 3.5rem; border-radius: 8px;">
+            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Lifetime Warranty on Every Repair</div>
+            <div class="trust-item"><i class="fa-solid fa-truck-pickup"></i> 24/7 Towing Available</div>
+            <div class="trust-item"><i class="fa-solid fa-file-signature"></i> We Handle Your Insurance Claim</div>
+        </div>
+
+        <section style="margin-top: 4rem; text-align: center;">
+            <div class="eyebrow center">What Drives Us</div>
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-tile">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Honesty</h3>
+                    <p>Straight answers about what your vehicle needs — and what it doesn't.</p>
+                </div>
+                <div class="value-tile">
+                    <i class="fa-solid fa-star"></i>
+                    <h3>Craftsmanship</h3>
+                    <p>ICAR-trained technicians and factory-matched paint on every job.</p>
+                </div>
+                <div class="value-tile">
+                    <i class="fa-solid fa-comments"></i>
+                    <h3>Communication</h3>
+                    <p>You'll know the status of your repair every step of the way.</p>
+                </div>
+                <div class="value-tile">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Care</h3>
+                    <p>We treat every client's vehicle like it's our own.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-section" id="warranty">
+            <div class="eyebrow center">Peace Of Mind</div>
+            <div class="auth-header">
+                <h2>Our Lifetime Warranty</h2>
+                <p>Every repair performed at Platinum Motorsports Collision Center is backed by a lifetime warranty for as long as you own your vehicle — on workmanship and materials for the life of the repair.</p>
+            </div>
+            <ul class="icon-list" style="max-width: 560px; margin: 0 auto;">
+                <li><i class="fa-solid fa-circle-check"></i> Covers workmanship and paint for the life of your vehicle</li>
+                <li><i class="fa-solid fa-circle-check"></i> Honored at either of our shop locations</li>
+                <li><i class="fa-solid fa-circle-check"></i> No cost to you — it's included with every repair we complete</li>
+            </ul>
+            <div class="btn-row center" style="margin-top: 2rem;">
+                <a href="contact.html#authorization" class="btn">Get Your Work Authorization Form</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a href="index.html" class="footer-brand"><img src="images/logo.png" alt="Platinum Motorsports Collision Center"></a>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="contact-bar">
+            <div class="footer-item">
+                <i class="fa-solid fa-phone"></i>
+                <strong>Call Us</strong>
+                <a href="tel:2815550199">(281) 555-0199</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-envelope"></i>
+                <strong>Email Us</strong>
+                <a href="mailto:info@platinummotorsports.com">info@platinummotorsports.com</a>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>Visit Us</strong>
+                <span>123 Auto Body Way, Sugar Land, TX 77479</span>
+            </div>
+            <div class="footer-item">
+                <i class="fa-solid fa-clock"></i>
+                <strong>Business Hours</strong>
+                <span>Mon–Fri 8am–5pm | 24/7 Towing</span>
+            </div>
+        </div>
+        <div class="copyright-bar">© 2026 Platinum Motorsports Collision Center. All Rights Reserved.</div>
+    </footer>
+
+    <a href="contact.html#authorization" class="floating-auth"><i class="fa-solid fa-file-signature"></i> Online Authorization</a>
+
+    <script src="main.js"></script>
+</body>
+</html>
